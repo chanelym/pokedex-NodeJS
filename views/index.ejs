@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+        <title>Projeto Pokédex</title>
+    </head>
+
+    <body>
+        <nav>
+            <img src="/img/ghost.gif" class="img-fluid gif" alt="Charmander chasing hils tail">
+            <h1>My Pokédex</h1>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="cadastro">Cadastro</a>
+                </li>
+                <li>
+                    <a href="detalhes">Detalhes</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="main-class"> 
+        
+                <ul>
+                    <% pokedex.forEach(item => { %>
+                        <li><%= item.Nome %></li>
+                        <li><%= item.Imagem %></li>
+                        <li><%= item.Tipo %></li>
+                    <% }) %>
+                </ul>
+            
+    </section> 
+
+
+    </body>
+</html>
