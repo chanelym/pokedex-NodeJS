@@ -29,10 +29,10 @@
         <section class="main-class"> 
         
                 <ul>
-                    <% pokedex.forEach(item => { %>
-                        <li><%= item.Nome %></li>
-                        <li><%= item.Imagem %></li>
-                        <li><%= item.Tipo %></li>
+                    <% pokedex.forEach(pokedex => { %>
+                        <li>Imagem: <%= pokedex.photo %></li>
+                        <li>Nome: <%= pokedex.name %></li>
+                        <li>Tipo: <%= pokedex.type %></li>
                     <% }) %>
                 </ul>
             

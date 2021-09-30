@@ -54,4 +54,11 @@ nav ul li a:hover {
     justify-content: space-around;
     align-items: center;
     padding: 6rem 3rem 3rem 3rem;
-  }
+}
+
+.main-class-cadastro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 3rem 3rem 3rem;
+}

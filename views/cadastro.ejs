@@ -23,5 +23,28 @@
             </li>
         </ul>
     </nav>
+
+    <section class="main-class-cadastro">
+
+        <form action="/receiveinfo" method="POST">
+            <div>
+                <label for="Nome: "></label>
+                <input type="text" name="poke_name" id="poke_name" placeholder="Digite o nome do Pokémon" required>
+            </div>
+            
+            <div>
+                <label for="Foto:"></label>
+                <input type="texto" name="poke_photo" id="poke_photo" placeholder="Suba a imagem" required>
+            </div>
+            
+            <div>
+                <label for="Tipo:"></label>
+                <input type="text" name="poke_type" id="poke_type" placeholder="Digite o tipo do Pokémon" required>
+            </div>
+            
+            <button type="submit">Adicionar Pokémon</button>
+        </form>
+    </section>
+
 </body>
 </html>
