@@ -8,9 +8,11 @@
     <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
     <title>Projeto Pokédex</title>
 </head>
+
 <body>
     <nav>
-        <img src="/img/ghost.gif" class="img-fluid gif" alt="Charmander chasing hils tail">
+        <img src="/img/charmander.gif" class="img-fluid gif" alt="Charmander chasing hils tail">
+        <img src="/img/pokedex.png" class="img" alt="Pokédex Logo">
         <ul>
             <li>
                 <a href="/">Home</a>
@@ -24,27 +26,62 @@
         </ul>
     </nav>
 
-    <section class="main-class-cadastro">
+    <% if(message != "") {  %>
+        <section class="message">
+            <p><%= message %></p> <span class="close">&times;</span>
+        </section>
+    <% }  %>
 
+    <section class="main-class-cadastro">
         <form action="/receiveinfo" method="POST">
-            <div>
+            <h2> Hora de Cadastrar o Pokémon </h2>
+
+            <section class="form-control">
+                <label for="Foto: "></label>
+                <input type="text" name="poke_photo" id="photo" placeholder="Cole a URL completa da imagem" required>
+                <a href="https://www.pokemon.com/br/pokedex/" target="__blank">Baixe as imagens aqui!</a>
+            </section>
+
+            <section class="form-control">
                 <label for="Nome: "></label>
-                <input type="text" name="poke_name" id="poke_name" placeholder="Digite o nome do Pokémon" required>
-            </div>
-            
-            <div>
-                <label for="Foto:"></label>
-                <input type="texto" name="poke_photo" id="poke_photo" placeholder="Suba a imagem" required>
-            </div>
-            
-            <div>
+                <input type="text" name="poke_name" id="name" placeholder="Digite o nome do Pokémon" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Número:"></label>
+                <input type="text" name="poke_number" id="number" placeholder="Digite o número do Pokémon" required>
+            </section>
+                
+            <section class="form-control">
                 <label for="Tipo:"></label>
-                <input type="text" name="poke_type" id="poke_type" placeholder="Digite o tipo do Pokémon" required>
-            </div>
+                <input type="text" name="poke_type" id="type" placeholder="Digite o tipo do Pokémon" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Categoria:"></label>
+                <input type="text" name="poke_category" id="category" placeholder="Adicione uma categoria ao Pokémon" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Altura:"></label>
+                <input type="text" name="poke_height" id="height" placeholder="Digite a altura do Pokémon" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Peso:"></label>
+                <input type="text" name="poke_category" id="weight" placeholder="Digite o peso do Pokémon" required>
+            </section>
+
+            <section class="form-control">
+                <label for="Descrição:"></label>
+                <input type="text" name="poke_description" id="description" placeholder="Adicione uma descrição ao Pokémon" required>
+            </section>
             
-            <button type="submit">Adicionar Pokémon</button>
+            <button type="submit" class="button">Adicionar Pokémon</button>
         </form>
     </section>
+
+    <script src="/js/script.js"></script>
 
 </body>
 </html>

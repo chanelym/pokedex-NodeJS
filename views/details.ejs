@@ -27,22 +27,20 @@
     </nav>
 
     <main class="index">
-        <% pokedex.forEach(pokedex => { %>
-            <section class="wrapper">
+        <section class="wrapper">
                 <article class="card_content">
-                    <img class="img" src="<%= pokedex.photo %>">
-                    <p class="name"> Name: <%= pokedex.name %></p>
-                    <p class="type"> Type: <%= pokedex.type %></p>
-                    <p class="number"> Number: <%= pokedex.number %></p>
-                    <p class="description"> Description: <%= pokedex.description %></p>
-                    <p class="height">Height: <%= pokedex.height %></p>
-                    <p class="weight"> Weight: <%= pokedex.weight %></p>
-                    <p class="category"> Category: <%= pokedex.category %></p>
-                    <p class="skill"> Skill: <%= pokedex.skill %></p>
+                    <img class="img" src="<%= poked.photo %>">
+                    <p class="name"> Name: <%= poked.name %></p>
+                    <p class="type"> Type: <%= poked.type %></p>
+                    <p class="number"> Number: <%= poked.number %></p>
+                    <p class="description"> Description: <%= poked.description %></p>
+                    <p class="height">Height: <%= poked.height %></p>
+                    <p class="weight"> Weight: <%= poked.weight %></p>
+                    <p class="category"> Category: <%= poked.category %></p>
+                    <p class="skill"> Skill: <%= poked.skill %></p>
                 </article>
             </section>
-        <% }) %>
-    </main>
+        </main>
 
     <script src="/js/script.js"></script>
 

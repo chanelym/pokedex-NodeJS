@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
-        <title>Projeto Pokédex</title>
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Projeto Pokédex</title>
+</head>
 
-    <body>
-        <nav>
-            <img src="/img/ghost.gif" class="img-fluid gif" alt="Charmander chasing hils tail">
-            <h1>My Pokédex</h1>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="cadastro">Cadastro</a>
-                </li>
-                <li>
-                    <a href="detalhes">Detalhes</a>
-                </li>
-            </ul>
-        </nav>
+<body>
+    <nav>
+        <img src="/img/charmander.gif" class="img-fluid gif" alt="Charmander chasing hils tail">
+        <img src="/img/pokedex.png" class="img" alt="Pokédex Logo">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="cadastro">Cadastro</a>
+            </li>
+            <li>
+                <a href="detalhes">Detalhes</a>
+            </li>
+        </ul>
+    </nav>
 
-        <section class="main-class"> 
-        
-                <ul>
-                    <% pokedex.forEach(pokedex => { %>
-                        <li>Imagem: <%= pokedex.photo %></li>
-                        <li>Nome: <%= pokedex.name %></li>
-                        <li>Tipo: <%= pokedex.type %></li>
-                    <% }) %>
-                </ul>
-            
-    </section> 
-
-
-    </body>
+    <main class="index">
+        <% pokedex.forEach((pokedex, find) => { %>
+            <section class="wrapper">
+                <article class="card_content">
+                    <a href="/detalhes/<%= find %>"><img class="img" src="<%= pokedex.photo %>"></a>
+                    <p class="name"> <%= pokedex.name %></p>
+                    <p class="type"> <%= pokedex.type %></p>
+                </article>
+            </section>
+        <% }) %>
+    </main>
+          
+    <script src="/js/script.js"></script>
+    
+</body>
 </html>

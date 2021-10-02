@@ -3,6 +3,8 @@ const app = express();
 const path = require("path"); 
 const port = 3000; 
 
+let message = "";
+
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -11,17 +13,41 @@ app.use(express.urlencoded( { extended: true } ));
 
 // Creating JSON for Pokémon Info
 
-const pokedex = [{
-    number: "",
-    name: "",
-    type: "",
-    photo: "",
-    description: "",
-    height: "",
-    weight: "",
-    category: "",
-    skill: "",
-}];
+const pokedex = [
+    {
+    number: "012",
+    name: "Butterfree",
+    type: "Bug",
+    photo: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+    description: "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
+    height: "1.1m",
+    weight: "32Kg",
+    category: "Borboleta",
+    skill: "Compound Eyes",
+    },
+    {
+    number: "004",
+    name: "Charmander",
+    type: "Fire",
+    photo: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    description: "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+    height: "0.6m",
+    weight: "8.5Kg",
+    category: "Lizard",
+    skill: "Blaze",
+    },
+    {
+    number: "039",
+    name: "Jigglypuff",
+    type: "Fairy",
+    photo: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png",
+    description: "Jigglypuff has top-notch lung capacity, even by comparison to other Pokémon. It won’t stop singing its lullabies until its foes fall asleep.",
+    height: "0.5m",
+    weight: "5.5Kg",
+    category: "Balloon",
+    skill: "Cute Charm",
+    }
+];
 
 // Initiating Routing
 
@@ -30,7 +56,11 @@ app.get("/", function (req, res) {
 });
 
 app.get("/cadastro", function (req, res) {
-    res.render("../views/cadastro.ejs");
+    setTimeout(() => {
+        message = "";
+      }, 1000);
+      message = 'Parabéns, seu Pokémon foi cadastrado!'
+    res.render("cadastro.ejs", { message });
 });
 
 app.post("/receiveinfo", function (req, res) {
@@ -45,11 +75,20 @@ app.post("/receiveinfo", function (req, res) {
         weight: poke_weight, 
         category: poke_category, 
         skill: poke_skill});
-    res.redirect("/cadastro");
+        message = 'Parabéns, seu Pokémon foi cadastrado!'
+    res.redirect("cadastro");
 });
 
 app.get("/detalhes", function (req, res) {
-    res.render("../views/detalhes.ejs", { pokedex : pokedex });
+    res.render("detalhes.ejs", { pokedex : pokedex });
+});
+
+app.get('/detalhes/:id', function (req, res) {
+    const id = req.params.id;
+    const poked = pokedex[id];
+    res.render("details", {
+        poked,
+      });
 });
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
