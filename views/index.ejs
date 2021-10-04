@@ -18,13 +18,16 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="cadastro">Cadastro</a>
-            </li>
-            <li>
-                <a href="detalhes">Detalhes</a>
+                <a href="/cadastro">Cadastro</a>
             </li>
         </ul>
     </nav>
+
+    <% if(message != "") {  %>
+        <section class="message">
+            <p><%= message %></p> <span class="close">&times;</span>
+        </section>
+    <% }  %>
 
     <main class="index">
         <% pokedex.forEach((pokedex, find) => { %>

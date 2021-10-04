@@ -52,15 +52,14 @@ const pokedex = [
 // Initiating Routing
 
 app.get("/", function (req, res) {
-    res.render("index.ejs", { pokedex: pokedex });
-});
-
-app.get("/cadastro", function (req, res) {
     setTimeout(() => {
         message = "";
       }, 1000);
-      message = 'Parabéns, seu Pokémon foi cadastrado!'
-    res.render("cadastro.ejs", { message });
+    res.render("index.ejs", { pokedex: pokedex, message });
+});
+
+app.get("/cadastro", function (req, res) {
+    res.render("cadastro.ejs", );
 });
 
 app.post("/receiveinfo", function (req, res) {
@@ -76,19 +75,13 @@ app.post("/receiveinfo", function (req, res) {
         category: poke_category, 
         skill: poke_skill});
         message = 'Parabéns, seu Pokémon foi cadastrado!'
-    res.redirect("cadastro");
-});
-
-app.get("/detalhes", function (req, res) {
-    res.render("detalhes.ejs", { pokedex : pokedex });
+    res.redirect("/");
 });
 
 app.get('/detalhes/:id', function (req, res) {
     const id = req.params.id;
     const poked = pokedex[id];
-    res.render("details", {
-        poked,
-      });
+    res.render("detalhes", { poked });
 });
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));

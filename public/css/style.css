@@ -14,48 +14,48 @@ html, body {
 /* Navigation Menu */
 
 nav {
-  display: flex;
-  align-items: left;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 nav .img {
-  height: 6rem;
-  padding-left: 0.5rem;
-  position: center;
-  margin-top: 0.5rem;
+    height: 6rem;
+    padding-left: 0.5rem;
+    position: center;
+    margin-top: 0.5rem;
 }
 
 nav .img-fluid {
-  height: 6rem;
-  width: 6rem;
-  padding-left: 0.5rem;
-  margin-top: 0.5rem;
+    height: 6rem;
+    width: 6rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    align-items: center;
 }
 
 nav ul li {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: red;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: 0.5s;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.5s;
 }
 
 nav ul li a:hover {
-  color: black;
+    color: black;
 }
 
 /* Index Page */
@@ -69,145 +69,172 @@ nav ul li a:hover {
 }
 
 .wrapper {
-  background: #eee;
-  padding: .6em 1em .6em .6em;
-  margin-bottom: 1em;
-  border-radius: .3em;
-  box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
-  border: solid 1px #ccc;
+    background: #eee;
+    padding: .6em 1em .6em .6em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
+    border: solid 1px #ccc;
 }
 
 .index .wrapper .card_content {
-  display: flex;
-  flex-direction: row;
-  display: inline-block;
-  padding: 1rem;
-  border-radius: .3em;
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: .3em;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
 
 .index .wrapper .card_content .img {
-  min-width: 80px;
-  height: 80px;
-  border-radius: .3em;
-  border: solid 1px firebrick;
+    min-width: 80px;
+    height: 80px;
+    border-radius: .3em;
+    border: solid 1px firebrick;
 }
 
 .index .wrapper .card_content .name {
-  margin: 0;
-  font-size: 1em;
-  margin-top: 0.5rem;
-  /* text-align: center; */
-  border-radius: .3em;
+    margin: 0;
+    font-size: 1em;
+    margin-top: 0.5rem;
+    border-radius: .3em;
 }
 
 .index .wrapper .card_content .type {
-  font-size: .7em;
-  color: #222;
-  margin-top: 0.5rem;
-  /* text-align: center; */
-  border-radius: .3em;
+    font-size: .7em;
+    color: #222;
+    margin-top: 0.5rem;
+    border-radius: .3em;
 }
 
 @media (max-width: 820px) {
-  .container {
-    min-width: auto;
-    display: block;
-  }
-  .card {
-    width: 100%;
-  }
+    .container {
+      min-width: auto;
+      display: block;
+    }
+    .card {
+      width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
-  .card {
-    box-shadow: none;
-  }
+    .card {
+      box-shadow: none;
+    }
+}
+
+/* Details Page */
+
+.index-detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 9rem 6rem 6rem 6rem;
+    text-align: left;
+}
+
+.wrapper-detalhes {
+    background: #eee;
+    padding: .6em 1em .6em .6em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
+    border: solid 1px #ccc;
+}
+
+.index-detalhes .wrapper-detalhes .card_content-detalhes {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: .3em;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
 
 /* Form Page */
 
 .main-class-cadastro {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 9rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 9rem 3rem 3rem 3rem;
 }
 
 .main-class-cadastro h2 {
-  display: flex;
-  text-align: center;
-  padding-bottom: 3rem;
-  font-size: 2.5rem;
-  width: 100%;
-  color: red;
+    display: flex;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    width: 100%;
+    color: red;
 }
 
 .main-class-cadastro form {
-  max-width: 900px;
-  margin: auto;
+    max-width: 900px;
+    margin: auto;
 }
 
 .main-class-cadastro form section input {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.3rem;
-  text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  outline: none;
-  border-radius: 0.5rem;
-  border: none;
-  border-bottom: 1px solid red;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+    border-bottom: 1px solid red;
 }
 
 .main-class-cadastro form section label {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .main-class-cadastro form .button {
-  border: 1px solid #3359ec;
-  padding: 1rem;
-  font-size: 0.8vw;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  display: block;
-  margin: auto;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: 0.3s ease-out;
-  width: 40%;
+    border: 1px solid #3359ec;
+    padding: 1rem;
+    font-size: 0.8vw;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    width: 40%;
 }
 
 /* Confirmation Message */
 
 .message {
-  padding: 1.5rem;
-  background-color: rgb(197, 255, 214);
-  color: #004d04;
-  position: fixed;
-  top: 3rem;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .message .close {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: .3s;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .message .close:hover{
-  color: rgb(255, 0, 0);
-  transform: scale(1.5);
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
 }

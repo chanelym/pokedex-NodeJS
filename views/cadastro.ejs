@@ -18,20 +18,11 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="cadastro">Cadastro</a>
-            </li>
-            <li>
-                <a href="detalhes">Detalhes</a>
+                <a href="/cadastro">Cadastro</a>
             </li>
         </ul>
     </nav>
-
-    <% if(message != "") {  %>
-        <section class="message">
-            <p><%= message %></p> <span class="close">&times;</span>
-        </section>
-    <% }  %>
-
+    
     <section class="main-class-cadastro">
         <form action="/receiveinfo" method="POST">
             <h2> Hora de Cadastrar o Pokémon </h2>
